@@ -8,18 +8,23 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sachinhandiekar</groupId>
+	<groupId>jp.co.aainc</groupId>
 	<artifactId>jInstagram</artifactId>
 	<name>jInstagram</name>
-	<version>1.0.5-SNAPSHOT</version>
+	<version>1.0.4a</version>
 	<packaging>jar</packaging>
-	<description>Java Instagram API by Sachin Handiekar</description>
+	<description>Java Instagram API by Sachin Handiekar. Modified by HungPT</description>
 
 	<developers>
 		<developer>
 			<id>sachin-handiekar</id>
 			<name>Sachin Handiekar</name>
 			<email>sachin.handiekar@gmail.com</email>
+		</developer>
+		<developer>
+			<id>HungPT</id>
+			<name>HungPT</name>
+			<email>hungpt297@gmail.com</email>
 		</developer>
 	</developers>
 
@@ -30,14 +35,14 @@
 	<licenses>
 		<license>
 			<name>MIT</name>
-			<url>http://github.com/sachin-handiekar/jInstagram/blob/master/LICENSE.txt</url>
+			<url>http://github.com/hungpt297/jInstagram/blob/master/LICENSE.txt</url>
 		</license>
 	</licenses>
 
 	<scm>
-		<connection>scm:git:git@github.com/sachin-handiekar/jInstagram.git</connection>
-		<developerConnection>scm:git:git@github.com:sachin-handiekar/jInstagram.git</developerConnection>
-		<url>git@github.com:sachin-handiekar/jInstagram.git</url>
+		<connection>scm:git:git@github.com/hungpt297/jInstagram.git</connection>
+		<developerConnection>scm:git:git@github.com:hungpt297/jInstagram.git</developerConnection>
+		<url>git@github.com:hungpt297/jInstagram.git</url>
 	</scm>
 
 	<dependencies>
