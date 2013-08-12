@@ -72,7 +72,7 @@ OembedInformation info = oembed.getOembedInformation("http://instagram.com/p/BUG
 <dependency>
    <groupId>com.sachinhandiekar</groupId>
    <artifactId>jInstagram</artifactId>
-   <version>1.0.4</version>
+   <version>1.0.4a</version>
 </dependency>
 ```
 
@@ -80,7 +80,7 @@ OembedInformation info = oembed.getOembedInformation("http://instagram.com/p/BUG
 
 * Google GSON (http://code.google.com/p/google-gson/)
 
-##About me
+##About author
 
 * [LinkedIn](http://uk.linkedin.com/in/sachinhandiekar)
 * Email   : sachin.handiekar at gmail.com / sach21 at gmail.com
