@@ -1,5 +1,7 @@
 package org.jinstagram.realtime;
 
+import java.util.List;
+
 import org.jinstagram.entity.common.Meta;
 
 import com.google.gson.annotations.SerializedName;
@@ -10,7 +12,7 @@ public class SubscriptionResponse {
 	private Meta meta;
 
 	@SerializedName("data")
-	private SubscriptionResponseData data;
+	private List<SubscriptionResponseData> data;
 
 	/**
 	 * @return the meta
@@ -29,15 +31,14 @@ public class SubscriptionResponse {
 	/**
 	 * @return the data
 	 */
-	public SubscriptionResponseData getData() {
+	public List<SubscriptionResponseData> getData() {
 		return data;
 	}
 
 	/**
 	 * @param data the data to set
 	 */
-	public void setData(SubscriptionResponseData data) {
+	public void setData(List<SubscriptionResponseData> data) {
 		this.data = data;
 	}
-
 }
