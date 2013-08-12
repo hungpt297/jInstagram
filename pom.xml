@@ -8,10 +8,10 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>jp.co.aainc</groupId>
+	<groupId>jp.co.aainc.jinstagram</groupId>
 	<artifactId>jInstagram</artifactId>
 	<name>jInstagram</name>
-	<version>1.0.4a</version>
+	<version>1.0.5</version>
 	<packaging>jar</packaging>
 	<description>Java Instagram API by Sachin Handiekar. Modified by HungPT</description>
 
@@ -30,6 +30,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
+    	<github.global.server>github</github.global.server>
 	</properties>
 
 	<licenses>
@@ -59,20 +61,50 @@
 		</dependency>
 
 	</dependencies>
-
+	
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.0</version>
-				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
-				</configuration>
+	    <plugins>
+	    	<plugin>
+			    <artifactId>maven-deploy-plugin</artifactId>
+			    <version>2.7</version>
+			    <configuration>
+			        <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+			    </configuration>
 			</plugin>
-		</plugins>
+	        <plugin>
+	            <groupId>com.github.github</groupId>
+	            <artifactId>site-maven-plugin</artifactId>
+	            <version>0.8</version>
+	            <configuration>
+	                <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
+	                <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+	                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+	                <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
+	                <includes><include>**/*</include></includes>
+	                <repositoryName>jInstagram</repositoryName>      <!-- github repo name -->
+	                <repositoryOwner>hungpt297</repositoryOwner>    <!-- github username  -->
+	            </configuration>
+	            <executions>
+	              <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+	              <execution>
+	                <goals>
+	                  <goal>site</goal>
+	                </goals>
+	                <phase>deploy</phase>
+	              </execution>
+	            </executions>
+	        </plugin>
+	    </plugins>
 	</build>
+	
+	<distributionManagement>
+	    <repository>
+	        <id>github</id>
+	        <name>GitHub ${project.artifactId} Repository</name>
+	        <url>https://raw.github.com/hungpt297/${project.artifactId}/mvn-repo</url>
+	    </repository>
+	</distributionManagement>
+	
 	<profiles>
 		<profile>
 			<id>release-sign-artifacts</id>

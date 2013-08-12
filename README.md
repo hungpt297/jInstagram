@@ -72,7 +72,7 @@ OembedInformation info = oembed.getOembedInformation("http://instagram.com/p/BUG
 <dependency>
    <groupId>com.sachinhandiekar</groupId>
    <artifactId>jInstagram</artifactId>
-   <version>1.0.4a</version>
+   <version>1.0.5</version>
 </dependency>
 ```
 
