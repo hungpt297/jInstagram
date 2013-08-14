@@ -3,7 +3,8 @@ jInstagram
 
 A java wrapper for the instagram api
 
-===========
+##Maven
+```xml
 <repository>
     <id>jInstagram-mvn-repo</id>
     <url>https://raw.github.com/hungpt297/jInstagram/mvn-repo</url>
@@ -13,7 +14,7 @@ A java wrapper for the instagram api
     </snapshots>
 </repository>
 
-===========
+
 <dependency>
 	<groupId>com.google.code.gson</groupId>
 	<artifactId>gson</artifactId>
@@ -29,3 +30,4 @@ A java wrapper for the instagram api
 		<artifactId>jInstagram</artifactId>
 		<version>1.0.5</version>
 </dependency>
+```
