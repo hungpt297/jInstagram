@@ -27,7 +27,7 @@ A java wrapper for the instagram api
 </dependency>
 <dependency>
 	<groupId>jp.co.aainc.jinstagram</groupId>
-		<artifactId>jInstagram</artifactId>
-		<version>1.0.5</version>
+	<artifactId>jInstagram</artifactId>
+	<version>1.0.5</version>
 </dependency>
 ```
